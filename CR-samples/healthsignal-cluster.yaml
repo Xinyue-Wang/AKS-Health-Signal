@@ -9,6 +9,7 @@ metadata:
     name: upgrade-6e8ef28e
 spec:
   type: ClusterHealth
+  timeout: 15m
 status:
   conditions:
   - type: Ready

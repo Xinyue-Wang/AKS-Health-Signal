@@ -14,6 +14,7 @@ metadata:
     health.aks.io/request-name: aks-userpool-31207608-vmss000000-6e8ef28e
 spec:
   type: NodeHealth
+  timeout: 10m
   targetRef:
     apiVersion: v1
     kind: Node

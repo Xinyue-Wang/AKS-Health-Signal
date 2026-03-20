@@ -105,6 +105,12 @@ spec:
                     type: string
                 type: object
                 x-kubernetes-map-type: atomic
+              timeout:
+                description: |-
+                  Timeout is the maximum duration the RP waits for a health verdict.
+                  If the timeout elapses with no "False" condition, the RP proceeds.
+                  Expressed as a Kubernetes duration (e.g., "5m", "1h30m").
+                type: string
               type:
                 description: Type is the health signal type (e.g., NodeHealth).
                 enum:

@@ -60,6 +60,12 @@ type HealthSignalSpec struct {
 	// Required when type is NodeHealth.
 	// +optional
 	TargetRef *corev1.ObjectReference `json:"targetRef,omitempty"`
+
+	// Timeout is the maximum duration the RP waits for a health verdict.
+	// If the timeout elapses with no "False" condition, the RP proceeds.
+	// Expressed as a Kubernetes duration (e.g., "5m", "1h30m").
+	// +optional
+	Timeout *metav1.Duration `json:"timeout,omitempty"`
 }
 
 // HealthSignalStatus defines the observed state of a HealthSignal.
